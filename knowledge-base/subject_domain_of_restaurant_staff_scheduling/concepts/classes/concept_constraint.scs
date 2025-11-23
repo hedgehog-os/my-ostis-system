@@ -1,0 +1,9 @@
+concept_constraint
+<- sc_node_class;
+=> nrel_main_idtf:
+[Ограничение]
+(* <- lang_ru;; *);
+[Constraint]
+(* <- lang_en;; *);
+<= nrel_inclusion:
+subject_domain_of_restaurant_staff_scheduling;
