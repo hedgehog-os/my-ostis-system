@@ -1,0 +1,31 @@
+subject_domain_of_restaurant_staff_scheduling
+<- concept_subject_domain;
+=> nrel_main_idtf:
+    [Предметная область планирования смен в ресторане]
+    (*
+        <- lang_ru;;
+    *);
+    [Subject domain of restaurant staff scheduling]
+    (*
+        <- lang_en;;
+    *);
+<= nrel_private_subject_domain: 
+    subject_domain_of_human_resources_management;
+=> nrel_private_subject_domain:
+    subject_domain_of_shift_scheduling;
+    subject_domain_of_resource_allocation;
+-> rrel_maximum_studied_object_class:
+    concept_employee_shift;
+-> rrel_not_maximum_studied_object_class:
+    concept_weekly_schedule;
+-> rrel_explored_relation:
+    nrel_shift_constraints;
+=> nrel_note:
+    [Данная предметная область описывает планирование графика работы сотрудников в ресторане с учетом профессий, смен и ограничений.]
+    (*
+        <- lang_ru;;
+    *);
+    [This subject domain describes scheduling staff shifts in a restaurant considering professions, shifts, and constraints.]
+    (*
+        <- lang_en;;
+    *);;
