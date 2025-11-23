@@ -1,0 +1,1 @@
+. "/home/egor/ostis-example-app/build/Release/generators/conanrunenv-release-x86_64.sh"

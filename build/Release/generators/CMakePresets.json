@@ -1,0 +1,46 @@
+{
+    "version": 3,
+    "vendor": {
+        "conan": {}
+    },
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 15,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "conan-release",
+            "displayName": "'conan-release' config",
+            "description": "'conan-release' configure using 'Unix Makefiles' generator",
+            "generator": "Unix Makefiles",
+            "cacheVariables": {
+                "CMAKE_POLICY_DEFAULT_CMP0091": "NEW",
+                "CMAKE_BUILD_TYPE": "Release"
+            },
+            "toolchainFile": "generators/conan_toolchain.cmake",
+            "binaryDir": "/home/egor/ostis-example-app/build/Release"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "conan-release",
+            "configurePreset": "conan-release",
+            "jobs": 16
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "conan-release",
+            "configurePreset": "conan-release",
+            "execution": {
+                "jobs": 16
+            },
+            "environment": {
+                "LD_LIBRARY_PATH": "/home/egor/.conan2/p/b/scl-m9bf90ea4e7c55/p/lib:/home/egor/.conan2/p/ps-co76a98541f241e/p/lib:/home/egor/.conan2/p/b/sc-maaafcc4c70bd45/p/lib:$penv{LD_LIBRARY_PATH}",
+                "DYLD_LIBRARY_PATH": "/home/egor/.conan2/p/b/scl-m9bf90ea4e7c55/p/lib:/home/egor/.conan2/p/ps-co76a98541f241e/p/lib:/home/egor/.conan2/p/b/sc-maaafcc4c70bd45/p/lib:$penv{DYLD_LIBRARY_PATH}",
+                "PATH": "/home/egor/.conan2/p/b/sc-maaafcc4c70bd45/p/bin:$penv{PATH}"
+            }
+        }
+    ]
+}
